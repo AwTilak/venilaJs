@@ -1,0 +1,240 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+body {
+    background-color: rgb(73, 67, 67);
+
+}
+
+.projects {
+    margin: 0.2rem 3rem;
+}
+
+.wrapper {
+    margin-top: 3.5rem;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#search-container {
+    margin: 1.5em 0;
+}
+
+#search-container input {
+    background-color: transparent;
+    width: auto;
+    border-bottom: 2px solid #110f29;
+    padding: 0.6em 0.3em;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#search-container input:focus {
+    border-bottom-color: #6759ff;
+}
+
+#search-container button {
+    padding: .5rem 2rem;
+    margin-left: 1em;
+    background-color: #6759ff;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-top: 0.5em;
+    cursor: pointer;
+}
+
+.button-value {
+    border: 2px solid #6759ff;
+    padding: .7em 1.8em;
+    border-radius: 3em;
+    background-color: transparent;
+    color: #6759ff;
+    cursor: pointer;
+}
+
+.btn-all:hover,
+.btn-venilaJs:hover,
+.btn-reactJs:hover {
+    background-color: #6759ff;
+    color: #ffffff;
+}
+
+.active {
+    background-color: #6759ff;
+    color: #ffffff;
+}
+
+#products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.3em;
+    width: auto;
+    place-items: center stretch;
+
+}
+
+/* Animated hover cards */
+
+
+
+.card {
+    position: relative;
+    margin-top: 1.1rem;
+
+}
+
+.image {
+    height: 204px;
+    width: 300px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+
+
+.card .face {
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.card .face.face1 {
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.card:hover .face.face1 {
+    background: #ff0057;
+    transform: translateY(0px);
+}
+
+.card .face.face1 .content {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.card:hover .face.face1 .content {
+    opacity: 1;
+}
+
+.card .face.face1 .content i {
+    max-width: 100px;
+}
+
+.card .face.face2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.card:hover .face.face2 {
+    transform: translateY(0);
+}
+
+.card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #414141;
+}
+
+.card .face.face2 .content h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    color: #414141;
+}
+
+a {
+    text-decoration: none;
+    color: #414141;
+}
+
+/* '********************' */
+
+.btns {
+    margin-top: .6rem;
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: bold;
+    color: #6759ff;
+}
+
+.btn {
+    margin: 0.3rem .2rem;
+    border: 2px solid #6759ff;
+    padding: .2em .8em;
+    border-radius: 3em;
+    background-color: transparent;
+    color: #6759ff;
+    cursor: pointer;
+}
+
+.demo-btn:hover {
+    background-color: #6759ff;
+
+}
+
+.demo-btn a:hover {
+    color: #ffffff;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+
+
+
+
+    #products {
+        width: auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1em;
+
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+
+    #products {
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0rem;
+
+    }
+}
