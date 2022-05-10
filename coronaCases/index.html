@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- for coutup numbers in jquery -->
+    <script src="/path/to/cdn/jquery.min.js"></script>
+    <script src="/path/to/src/countfect.min.js"></script>
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Gocorona</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg  navbar-light bg-light ">
+        <div class="container-fluid  p-2">
+            <a class="navbar-brand display-1 " href="#">
+                <h1 class="display-6 px-5 text-primary">COVID<span class="text-danger">19</span></h1>
+            </a>
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end mx-5" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary fs-5 fw-bold mx-2 " aria-current="page" href="#main">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary fs-5 fw-bold mx-2" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary fs-5 fw-bold mx-2" href="#symptoms">Symptoms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary fs-5 fw-bold mx-2" href="#preventation">Preventation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary fs-5 fw-bold mx-2" href="#contact">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- main header -->
+    <div class="main_header pb-5 pt-5 container mt-5" id="main">
+        <div class="row">
+            <div class=" col-lg-5 col-md-5 col-12 order-lg-1 order-2">
+                <div class="leftside w-100 h-100 d-flex justify-content-center  align-items-center">
+                    <img src="./images/covid-19-disinfection-spraying-in-cartoon-style-vector.webp" alt="corona"
+                        width="500" height="500">
+                </div>
+            </div>
+            <div class=" col-lg-7 col-md-7 col-12 order-lg-1 order-1 pb-5">
+                <div class="rightside  w-100 h-100 d-flex flex-column justify-content-center  align-items-center">
+                    <h2 class="text-secondary my-2 fs-7">Let's stay safe and fight together against corona.</h2>
+                    <h1 class="text-secondary my-2 fs-5">Be<span class="mx-2 text-info fs-7 fw-bold">Informed</span>
+                    </h1>
+                    <h1 class="text-secondary my-2 fs-5">Be<span class="mx-2 text-info fs-7 fw-bold">Prepared</span>
+                    </h1>
+
+                    <h1 class="text-secondary my-2 fs-5 ">Be<span class="mx-2 text-info fs-7 fw-bold">Ready</span>to
+                        fight
+                        <span class="text-warning fs-8 fw-bolder">#COVID19</h2>
+                        </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="corona_update pt-5 pb-5 container">
+
+        <div class="mb-3">
+            <h3 class="text-uppercase text-center">Your country <span class="fw-bold fs-8 m-2"
+                    id="country"></span>corona updates</h3>
+        </div>
+        <div class="row count_style">
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="cases mt-4 mb-5  ">
+                    <h1 class="count" data-target="5455" id="total_cases"></h1>
+                    <p>Total cases</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="cases mt-4 mb-5 ">
+                    <h1 class="count" data-target="5455" id="total_death"></h1>
+                    <p>Total Deaths</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="cases mt-4 mb-5 ">
+                    <h1 class="count" data-target="5455" id="total_recover"></h1>
+                    <p>Total Recovered</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="cases mt-4 mb-5 ">
+                    <h1 class="count" data-target="5455" id="today_cases"></h1>
+                    <p>New confirm cases</p>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-4 col-12">
+                <div class="cases mt-4 mb-5">
+                    <h1 class="count" data-target="55" id="today_death"></h1>
+                    <p>New death cases</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="cases mt-4 mb-5 ">
+                    <h1 class="count" data-target="550" id="today_recover"></h1>
+                    <p>New recovered cases</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ****************about section ******** -->
+    <div class="container-fluid  pt-5 pb-5 sub_section" id="about">
+        <div class="header text-center">
+            <h1>What is novel Corona(covid19)</h1>
+        </div>
+        <div class="row my-5">
+            <div class="col-lg-5 col-md-6 col-12 mt-5">
+                <img src="./images/covid-cells.jpg" alt="aboutImg" class="img-fluid ">
+            </div>
+            <div class="col-lg-7 col-md-6 col-12 mt-5">
+                <h2 class="fw-bold mb-1 text-light">What Is Coronavirus?</h2>
+                <p class="text-secondary ">Coronaviruses are a type of virus. There are many different kinds, and
+                    some
+                    cause disease. A
+                    coronavirus identified in 2019, SARS-CoV-2, has caused a pandemic of respiratory illness, called
+                    COVID-19.</p>
+                <h2 class="fw-bold mb-1 text-light">How does the coronavirus spread?</h2>
+                <p class="text-secondary ">As of now, researchers know that the coronavirus is spread through droplets
+                    and virus particles
+                    released into the air when an infected person breathes, talks, laughs, sings, coughs or sneezes.
+                    Larger droplets may fall to the ground in a few seconds, but tiny infectious particles can linger in
+                    the air and accumulate in indoor places, especially where many people are gathered and there is poor
+                    ventilation. This is why mask-wearing, hand hygiene and physical distancing are essential to
+                    preventing COVID-19.
+
+                </p>
+                <h2 class="fw-bold mb-1 text-light">How did the coronavirus start?</h2>
+                <p class="text-secondary ">The first case of COVID-19 was reported Dec. 1, 2019, and the cause was a
+                    then-new coronavirus later
+                    named SARS-CoV-2. SARS-CoV-2 may have originated in an animal and changed (mutated) so it could
+                    cause illness in humans. In the past, several infectious disease outbreaks have been traced to
+                    viruses originating in birds, pigs, bats and other animals that mutated to become dangerous to
+                    humans. Research continues, and more study may reveal how and why the coronavirus evolved to cause
+                    pandemic disease.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ***********symptoms sections*********** -->
+    <div class="  pt-5 pb-5 container" id="symptoms">
+        <div class="header text-center">
+            <h1>What are symptoms novel Corona(covid19)</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-12 mt-5">
+                <figure class="text-center">
+                    <img src="./images/cough.jpg" class="img-fluid" width="150" height="150">
+                    <figcaption class="fw-bold text-secondary">Cough</figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12 mt-5">
+                <figure class="text-center">
+                    <img src="./images/nos_running.jpg" class="img-fluid" width="150" height="150">
+                    <figcaption class="fw-bold text-secondary">Running nose</figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12 mt-5">
+                <figure class="text-center">
+                    <img src="./images/fever.jpg" class="img-fluid" width="150" height="150">
+                    <figcaption class="fw-bold text-secondary">High Fever above 105f</figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12 mt-5">
+                <figure class="text-center">
+                    <img src="./images/tired.jpg" class="img-fluid" width="150" height="150">
+                    <figcaption class="fw-bold text-secondary">weakness</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <!-- **********PReventation from corona virus************ -->
+    <div class="  pt-5 pb-5 container-fluid sub_section" id="preventation">
+        <div class="header text-center">
+            <h1>How to prevent from novel Corona(covid19)</h1>
+        </div>
+        <div class="container mt-5 pt-5">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-4 col-12 mt-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <figure class="text-center">
+                                <img src="./images/washHand.jpg" class="img-fluid rounded-circle" width="150"
+                                    height="150">
+                            </figure>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-12 d-flex justify-content-center align-items-center">
+                            <p class="text-light">Wash your hands often with soap and water for at least 20 seconds
+                                especially after you
+                                have been in a public place, or after blowing your nose, coughing, or sneezing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-12 mt-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <figure class="text-center">
+                                <img src="./images/useMask.jpg" class="img-fluid rounded-circle" width="150"
+                                    height="150">
+                            </figure>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-12 d-flex justify-content-center align-items-center">
+                            <p class="text-light">You cancough or sneeze into your mask. Put on a new, clean mask as
+                                soon as possible and
+                                wash your hands.Always cover your mouth and nose with a tissue when you cough or sneeze,
+                                or use the inside of your elbow and do not spit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 mt-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <figure class="text-center">
+                                <img src="./images/senitizer.jpg" class="img-fluid rounded-circle" width="150"
+                                    height="150">
+                            </figure>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-12 d-flex justify-content-center align-items-center">
+                            <p class="text-light">Clean high touch surfaces regularly or as needed and after you have
+                                visitors in your
+                                home. This includes tables, doorknobs, light switches, countertops, handles, desks,
+                                phones, keyboards, toilets, faucets, and sinks.Use senitizer for these.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 mt-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <figure class="text-center">
+                                <img src="./images/makeDistance.jpg" class="img-fluid rounded-circle" width="150"
+                                    height="150">
+                            </figure>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-12 d-flex justify-content-center align-items-center">
+                            <p class="text-light">Make a distance,Being in crowded places like restaurants, bars,
+                                fitness centers, or movie
+                                theaters puts you at higher risk for COVID-19.
+                                Avoid indoor spaces that do not offer fresh air from the outdoors as much as possible.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 mt-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <figure class="text-center">
+                                <img src="./images/test.jpg" class="img-fluid rounded-circle" width="150" height="150">
+                            </figure>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-12 d-flex justify-content-center align-items-center">
+                            <p class="text-light">esting can give you information about your risk of spreading COVID-19.
+                                You can choose from many different types of tests.
+                                Regardless of the test type you select, a positive test result means that you have an
+                                infection and should isolate and inform your close contacts to avoid spreading disease
+                                to others.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 mt-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <figure class="text-center">
+                                <img src="./images/exercise.jpg" class="img-fluid rounded-circle " width="150"
+                                    height="150">
+                            </figure>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-12 d-flex justify-content-center align-items-center">
+                            <p class="text-light">Research shows these questions measure people's activity levels pretty
+                                well. They also
+                                predict some medical problems, such as high blood pressure and high blood sugar. Many
+                                health issues that are well associated with a lack of physical activity — such as
+                                overweight, obesity, diabetes, and heart disease — are also associated with greater risk
+                                of severe illness and death from COVID-19.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- **********Contact us form************ -->
+    <div class="  pt-5 pb-5 container" id="contact">
+        <div class="header text-center">
+            <h1>Contact us if you have symptoms of novel Corona(covid19)</h1>
+        </div>
+        <div class="row mt-5 pt-5 pb-5">
+            <div class="col-lg-8 offset-lg-2 col-12">
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="fullname" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullname" placeholder="full name">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="hello12@gmail.com">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputNumber" class="form-label">Phone Number</label>
+                        <input type="number" class="form-control" id="inputNumber" placeholder="9803430436">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">Parmanent Address</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress2" class="form-label">Current Address</label>
+                        <input type="text" class="form-control" id="inputAddress2"
+                            placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputCity" class="form-label">City</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="mb-3">
+                        <label for="detail" class="form-label">Enter Your health Problems</label>
+                        <textarea class="form-control" id="detail" rows="3"></textarea>
+                    </div <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+            </form>
+        </div>
+    </div>
+    <!-- ********** for top button******** -->
+    <div class="container scroll_top   pr-5 mb-5">
+        <i class="fas fa-arrow-up" onclick="gotoTop()" id="topBtn"></i>
+    </div>
+
+    <footer>
+        <div class="footer_style text-white text-center container-fluid">
+            <p class="fs-5 fw-bold text-light">Created by &#169<span>Tilak khatri</span></p>
+        </div>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+
+</html>

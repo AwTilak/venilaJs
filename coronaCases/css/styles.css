@@ -1,0 +1,97 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Moon Dance', cursive; */
+    font-family: 'Rubik', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.link{
+color: rgb(50, 50, 133);
+}
+
+
+
+.coron_update{
+    margin-top: 3rem;
+}
+
+.corona_update h3{
+    color: tomato;
+}
+
+.sub_section{
+    background: rgba(17, 17, 17, 0.3);
+  
+}
+#topBtn{
+ 
+    display: hidden;
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    border: none;
+    outline: none;
+   background: blueviolet;
+   color: white;
+   padding: 12px;
+   border-radius:50% ;
+}
+#topBtn:hover{
+    background: rgb(65, 3, 56);
+}
+.footer_style{
+    padding: 3.5rem;
+    background: rgb(10, 10, 10);
+    margin-bottom: 0;
+}
+.count_style h1{
+    font-weight: bold;
+    margin: .5rem;
+    padding: .4rem;
+}
+
+/* responsive */
+@media(max-width:760px){
+    .main_header{
+        text-align: center;
+        height: 760px;
+        margin-bottom: 4rem;
+    }
+
+    .count_style{
+        display: inline!important;
+        text-align: center;
+    }
+    .count_style h1{
+        font-size: 34px;
+        font-weight: bold;
+        margin: .5rem;
+        padding: .4rem;
+    }
+    .count_style p{
+        font-size:24px;
+        font-weight:bold;
+    }
+}
+
+/* *******making card for the cases****** */
+.cases{
+    background:rgb(131, 98, 98);
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    color:white;
+    box-shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075)
+  ;
+}
