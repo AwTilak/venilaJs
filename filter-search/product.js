@@ -1,62 +1,62 @@
-let projects = [
+let products = [
     {
         id: 1,
-        projectName: "converter",
-        category: "venilaJs",
+        productName: "black leatherjacket",
+        category: "upwear",
         img: "./images/black-leather-jacket.jpg",
         desc: "Lorem Lorem Lorem kdjfjdf fkdjfajf fajfajkf flajflasdj fajf ",
     },
 
     {
         id: 2,
-        projectName: "shortLinker",
-        category: "venilaJs",
+        productName: "brown jacket",
+        category: "upwear",
         img: "./images/brown-jacket.jpg",
         desc: "Lorem Lorem Lorem kdjfjdf fkdjfajf fajfajkf flajflasdj fajf ",
     },
     {
         id: 3,
-        projectName: "tester",
-        category: "reactJs",
+        productName: "comfy gray pants",
+        category: "downwear",
         img: "./images/comfy-gray-pants.jpg",
         desc: "Lorem Lorem Lorem kdjfjdf fkdjfajf fajfajkf flajflasdj fajf ",
     },
     {
         id: 4,
-        projectName: "painter",
-        category: "venilaJs",
+        productName: "knitted top",
+        category: "upwear",
         img: "./images/knitted-top.jpg",
         desc: "Lorem Lorem Lorem kdjfjdf fkdjfajf fajfajkf flajflasdj fajf ",
     },
     {
         id: 5,
-        projectName: "expense-budget",
-        category: "venilaJs",
+        productName: "pink trouser",
+        category: "downwear",
         img: "./images/pink-trousers.jpg",
         desc: "Lorem Lorem Lorem kdjfjdf fkdjfajf fajfajkf flajflasdj fajf ",
     },
     {
         id: 6,
-        projectName: "weather forecast",
-        category: "reactJs",
+        productName: "short skirt",
+        category: "downwear",
         img: "./images/short-skirt.jpg",
         desc: "Lorem Lorem Lorem kdjfjdf fkdjfajf fajfajkf flajflasdj fajf ",
     },
-    {
-        id: 7,
-        projectName: "todo list",
-        category: "reactJs",
-        img: "./images/white-tshirt.jpg",
-        desc: "Lorem Lorem Lorem kdjfjdf fkdjfajf fajfajkf flajflasdj fajf ",
-    },
+    // {
+    //     id: 7,
+    //     projectName: "todo list",
+    //     category: "reactJs",
+    //     img: "./images/white-tshirt.jpg",
+    //     desc: "Lorem Lorem Lorem kdjfjdf fkdjfajf fajfajkf flajflasdj fajf ",
+    // },
 
 ];
 
-const projectSection = document.querySelector('#products');
+const productSection = document.querySelector('#products');
 
 let buttons = document.querySelectorAll(".button-value");
 window.addEventListener("DOMContentLoaded", function () {
-    display(projects);
+    display(products);
 });
 
 
@@ -67,7 +67,7 @@ buttons.forEach((button) => {
         let category = e.target.dataset.filter;
         // console.log(category)
         // take category from project
-        let projectCategory = projects.map((item) => {
+        let productCategory = products.map((item) => {
             if (item.category === category) {
                 // console.log(category);
                 return `<div class="card">
@@ -81,7 +81,7 @@ buttons.forEach((button) => {
                 <div class="face face2">
                     <div class="content">
                         <h3>
-                            ${item.projectName}
+                            ${item.productName}
                         </h3>
                         <p>${item.desc}</p>
                     </div>
@@ -94,18 +94,18 @@ buttons.forEach((button) => {
             </div>`;;
             }
         });
-        projectCategory = projectCategory.join("");
-        projectSection.innerHTML = projectCategory;
+        productCategory = productCategory.join("");
+        productSection.innerHTML = productCategory;
         if (category === "all") {
-            display(projects);
+            display(products);
         }
     })
 
 });
 
 // display all the cards
-function display(projectItem) {
-    let displayProject = projectItem.map((item) => {
+function display(productItem) {
+    let displayProduct = productItem.map((item) => {
         // console.log(item);
         return `<div class="card">
         <div class="face face1">
@@ -118,21 +118,16 @@ function display(projectItem) {
         <div class="face face2">
             <div class="content">
                 <h3>
-                    ${item.projectName}
+                    ${item.productName}
                 </h3>
                 <p>${item.desc}</p>
-            </div>
-
-            <div class="btns">
-                <button class="demo-btn btn"><a href="https:google.com" alt="_blank">Demo</a></button>
-                <button class="src-btn btn"><a href="#">Source</a></button>
             </div>
         </div>
     </div>`;
     });
     // console.log(displayProject.join(""))
-    displayProject = displayProject.join("");
-    projectSection.innerHTML = displayProject;
+    displayProduct = displayProduct.join("");
+    productSection.innerHTML = displayProduct;
 }
 
 
@@ -158,9 +153,9 @@ searchInput.addEventListener('keyup', function (e) {
     let inputValue = e.target.value.toLowerCase();
     // console.log(inputValue);
 
-    const filteredProject = projects.filter((element) => {
-        return (element.projectName.toLowerCase().includes(inputValue) || element.desc.toLowerCase().includes(inputValue) || element.category.toLowerCase().includes(inputValue));
+    const filteredProduct = products.filter((element) => {
+        return (element.productName.toLowerCase().includes(inputValue) || element.desc.toLowerCase().includes(inputValue) || element.category.toLowerCase().includes(inputValue));
     });
     // console.log(filteredProject);
-    display(filteredProject);
+    display(filteredProduct);
 });
